@@ -1,0 +1,6 @@
+1. Uncompress the zip file. 
+2. Enter the uncompressed folder. Type "make install"
+3. Type "./prediction -h" to check for all the command line options. 
+4. An quick example showing you how to predict the DNA shape of sequences stored in a file:
+./prediction -i ./Example/nature_ex/nature_ex.txt
+

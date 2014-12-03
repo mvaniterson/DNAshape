@@ -1,0 +1,43 @@
+##' plot one of the four DNAshape predictions 
+##'
+##' plot one of the four DNAshape predictions
+##' MWG and ProT are predicted per bp
+##' Roll and HelT are predicted per step  
+##' @title plot single DNAshape
+##' @param shape numeric vector containing the structural features
+##' @param sequence DNAString
+##' @param shapeType one of MGW, ProT, HelT or Roll
+##' @return generates a plot 
+##' @author mvaniterson
+plotShape <- function(shape, sequence, shapeType=c("MGW", "ProT", "HelT", "Roll"))
+  {
+    sequence <- unlist(strsplit(as.character(sequence), ""))
+    shapeName <- names(shape)
+    shape <- shape[[1]]
+    plot(1:length(shape), shape, type="b", xaxt="n", xlab=shapeName, ylab=shapeType, las=2)
+    if(shapeType %in% c("MGW", "ProT"))
+      axis(1, at=1:length(shape), labels=sequence)
+    else
+      axis(1, at=1:length(shape), labels=sequence[-1])
+    grid()
+  }
+
+##' plot all four DNAshape prediction in one figure
+##'
+##' 
+##' @title plot all four DNAshapes
+##' @param ifile file containing sequences (fasta-format)
+##' @return generates a plot
+##' @author mvaniterson
+plotShapes <- function(ifile)
+  {
+    sequence <- readDNAStringSet(ifile, format="fasta")
+    shapeTypes <- c("MGW", "ProT", "HelT", "Roll")
+    op <- par(mfcol=c(2, 2), mar=c(4,4,2,2))
+    for(i in 1:length(shapeTypes))
+      {
+        shape <- readShape(list.files(dirname(ifile), pattern=shapeTypes[i], full.names=TRUE))
+        plotShape(shape, sequence, shapeTypes[i])
+      }
+    par(op)
+  }

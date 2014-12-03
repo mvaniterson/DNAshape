@@ -1,0 +1,15 @@
+##' run the DNAshape prediction
+##'
+##' R wrapper around DNAshape prediction
+##' by Tianyin Zhou et al. NAR 2013
+##' @title DNAshape prediction
+##' @param ifile input file containing sequences (fasta-format)
+##' @return write DNAshape predictions to separate files
+##' @author mvaniterson
+predictDNAShapes <- function(ifile)
+  {
+    message("Beware: Input directory will be output directory!")
+    tool <- file.path(path.package("DNAshape"), "inst/v2.6_noSim", "prediction.exe")
+    system(paste(tool, "-i", ifile))
+  }
+
