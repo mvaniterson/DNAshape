@@ -21,6 +21,8 @@ test <- function(predicted, zip)
       }
   }
 
+if(FALSE)
+{
 library(DNAshape)
 
 data(shape.profiles)
@@ -43,3 +45,4 @@ sequence
 shapes <- seq2shape(sequence, shape.profiles)
 zip <- dir(pattern=paste0(sequence, ".zip"))
 test(shapes, zip)
+}

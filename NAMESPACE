@@ -1,14 +1,6 @@
-export(predictDNAShapes,
-       readShape,
-       plotShape,
-       plotShapes,
-       seq2shape,
+export(seq2shape,
        read.shape.profiles,
        store.shape.profiles)
 
-importFrom(Biostrings,
-           readDNAStringSet,
-           writeXStringSet,
-           DNAStringSet,
-           reverseComplement,
-           width)
+importFrom(Biostrings, reverseComplement)
+importFrom(Biostrings, DNAStringSet)

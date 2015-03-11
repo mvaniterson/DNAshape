@@ -1,15 +1,16 @@
 Package: DNAshape
 Type: Package
 Title: R wrapper for the DNAshape prediction software
-Version: 0.0.1
+Version: 0.0.3
 Date: 2014-09-24
 Author: Maarten van Iterson
 Maintainer: M. van Iterson <m.van_iterson@lumc.nl>
 Description: R wrapper for the DNAshape prediction software
     by Tianyin Zhou et al. NAR 2013 with some additional
-    reading and plotting facilities
+    reading and plotting facilities.
 License: GPL (>= 2)
 Depends:
-    R (>= 3.0), Biostrings
+    Biostrings, 
+    R (>= 3.0)
 
     
