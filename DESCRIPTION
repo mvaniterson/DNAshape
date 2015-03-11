@@ -10,6 +10,6 @@ Description: R wrapper for the DNAshape prediction software
     reading and plotting facilities
 License: GPL (>= 2)
 Depends:
-    R (>= 3.0)
-Imports:
-    Biostrings
+    R (>= 3.0), Biostrings
+
+    
