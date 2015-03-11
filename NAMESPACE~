@@ -1,3 +1,0 @@
-export(predictDNAShapes, readShape, plotShape, plotShapes)
-
-importFrom(Biostrings, readDNAStringSet)
