@@ -1,38 +1,3 @@
-##' run the DNAshape prediction
-##'
-##' R wrapper around DNAshape prediction
-##' by Tianyin Zhou et al. NAR 2013
-##' @title DNAshape prediction
-##' @param seqInput either DNAString or DNAStringSet
-##' @param executable use the original DNAshape executable or
-##' the R implementation 
-##' @return shape profile
-##' @author mvaniterson
-predictDNAShapes <- function(seqInput, executable = c("DNAshape", "R"))
-  {
-    executable <- match.arg(executable)
-
-    if(executable == "DNAshape")
-      {
-        if(class(sequence) == "DNAString" | class(sequence) == "DNAStringSet")
-          {
-            writeXStringSet(seqInput, filepath=tempfile())
-            seqInput <- tempfile()
-          }
-
-        message("Beware: Input directory will be output directory!")
-        tool <- file.path(path.package("DNAshape"), "v2.6_noSim", "prediction.exe")
-        system(paste(tool, "-i", seqInput))
-
-        ##read and return
-      }
-
-    if(executable == "R")
-      {
-        ##seq2shape
-      }
-  }
-
 ##' predict shape for DNA sequence
 ##'
 ##' R implementation that query's the extended
