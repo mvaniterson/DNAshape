@@ -48,6 +48,7 @@
 ##' @param kmerLength default = 5
 ##' @return shape profile
 ##' @author mvaniterson
+##' @export
 seq2shape  <- function(sequence, kmerLength=5) {
     if(class(sequence) == "character" & length(sequence) == 1)
         return(.seq2shape(sequence))

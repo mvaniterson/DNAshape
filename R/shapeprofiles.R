@@ -6,9 +6,10 @@
 ##' @param kmerLength length of kmer default 5
 ##' @return shape profiles for all kmers
 ##' @author mvaniterson
-read.shape.profiles <- function(file=NULL, kmerLength=5)
-  {
-
+##' @export
+##' @importFrom Biostrings reverseComplement
+read.shape.profiles <- function(file=NULL, kmerLength=5) {
+    
     if(missing(file))
       file <- file.path(path.package("DNAshape"), "v2.6_noSim/QueryTable.dat")
 
@@ -49,8 +50,8 @@ read.shape.profiles <- function(file=NULL, kmerLength=5)
 ##' @title store shape profile
 ##' @return filename Rdata-object
 ##' @author mvaniterson
-store.shape.profiles <- function()
-  {    
+##' @export
+store.shape.profiles <- function() {
     shape.profiles <- read.shape.profiles(kmerLength=5)
     save(shape.profiles, file=file.path(path.package("DNAshape"), "shape.profiles.RData"))
     print(paste("Create Rdata object:", file.path(path.package("DNAshape"), "shape.profiles.RData")))
