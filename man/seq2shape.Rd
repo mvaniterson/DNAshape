@@ -21,6 +21,7 @@ predict shape for DNA sequence
 \details{
 R implementation that query's the extended
 (reverse complement) pentamer shape profiles
+TODO add fasta-file input
 }
 \author{
 mvaniterson

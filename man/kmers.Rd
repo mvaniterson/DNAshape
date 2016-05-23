@@ -20,6 +20,7 @@ generate all kmers of given length
 \details{
 generate all kmers of given length
 with middle nucleotide...
+TODO find a fast way to exclude reverse complement sequences
 }
 \author{
 mvaniterson

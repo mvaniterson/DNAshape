@@ -2,6 +2,7 @@
 ##'
 ##' generate all kmers of given length
 ##' with middle nucleotide...
+##' TODO find a fast way to exclude reverse complement sequences
 ##' @title generate kmers
 ##' @param k length
 ##' @param alphabet default DNA bases 

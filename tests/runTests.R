@@ -1,7 +1,6 @@
 
 ##for unit testing
-test <- function(predicted, zip)
-    {
+test <- function(predicted, zip) {
         patterns <- c(minor_ave = "MGW", propel_ave = "ProT", roll_ave = "Roll", twist_ave = "HelT")
         files <- unzip(zip)
         on.exit(file.remove(files))
@@ -21,8 +20,7 @@ test <- function(predicted, zip)
             }
     }
 
-if(FALSE)
-{
+if(FALSE) {
     library(DNAshape)
 
     data(shape.profiles)

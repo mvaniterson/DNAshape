@@ -19,8 +19,7 @@
     ##this is not really nice
     ##average pair properties
     z <- c(NA, NA)
-    for(i in 3:4)
-        {
+    for(i in 3:4) {
             x <- as.numeric(shape[,i])
             y <- as.numeric(shape[,i+1])
             shape[1, i] <- x[1]
@@ -29,6 +28,7 @@
             z <- c(z, y[length(y)])
             shape <- shape[,-i-1,drop=FALSE]
         }
+    
     ##reshape output adding step bases and pairs
     shape <- rbind(shape, N=z)
     colnames(shape) <- gsub("1", "", colnames(shape))
@@ -42,6 +42,7 @@
 ##'
 ##' R implementation that query's the extended
 ##' (reverse complement) pentamer shape profiles
+##' TODO add fasta-file input
 ##' @title seq2shape
 ##' @param sequence character DNA sequence
 ##' (reverse complement) pentamer shape profiles
@@ -58,6 +59,6 @@ seq2shape  <- function(sequence, kmerLength=5) {
         return(.seq2shape(as.character(sequence)))
     else if(class(sequence) == "DNAStringSet")
         return(lapply(as.character(sequence), .seq2shape))
-    else
+    else 
         stop(paste("Unknown sequence input:", class(sequence)))
 }
