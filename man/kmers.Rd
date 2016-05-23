@@ -12,7 +12,7 @@ kmers(k, alphabet = c("A", "C", "G", "T"))
 \item{alphabet}{default DNA bases}
 }
 \value{
-DNAStringSet with all kmers##'
+DNAStringSet with all kmers
 }
 \description{
 generate all kmers of given length

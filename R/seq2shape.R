@@ -49,6 +49,8 @@
 ##' @param kmerLength default = 5
 ##' @return shape profile
 ##' @author mvaniterson
+##' @importFrom graphics abline axTicks mtext par plot points
+##' @importFrom utils data read.table
 ##' @export
 seq2shape  <- function(sequence, kmerLength=5) {
     if(class(sequence) == "character" & length(sequence) == 1)

@@ -6,7 +6,7 @@
 ##' @title generate kmers
 ##' @param k length
 ##' @param alphabet default DNA bases 
-##' @return DNAStringSet with all kmers##' 
+##' @return DNAStringSet with all kmers 
 ##' @author mvaniterson
 ##' @export
 ##' @importFrom Biostrings DNAStringSet

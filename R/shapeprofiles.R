@@ -7,7 +7,7 @@
 ##' @return shape profiles for all kmers
 ##' @author mvaniterson
 ##' @export
-##' @importFrom Biostrings reverseComplement
+##' @importFrom Biostrings reverseComplement DNAStringSet
 read.shape.profiles <- function(file=NULL, kmerLength=5) {
     
     if(missing(file))
