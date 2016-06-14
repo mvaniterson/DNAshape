@@ -9,9 +9,9 @@ shapediff(seq1, seq2, type = c("rmsd", "eucl"))
 \arguments{
 \item{seq1}{DNA sequence 1}
 
-\item{type}{shape difference measure rmsd or eucl.}
+\item{seq2}{DNA sequence 2}
 
-\item{seq1}{DNA sequence 2}
+\item{type}{shape difference measure rmsd or eucl.}
 }
 \value{
 shape difference
